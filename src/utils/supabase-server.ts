@@ -1,14 +1,14 @@
 import { cookies } from 'next/headers'
 import { createServerClient as createSC } from '@supabase/ssr'
 
-import { SUPABASEKEY, SUPABASEURL } from '@/settings'
+import { SUPABASE_KEY, SUPABASE_URL } from '@/settings'
 
 export function createServerClient() {
   const cookieStore = cookies()
 
   return createSC(
-    SUPABASEURL,
-    SUPABASEKEY,
+    SUPABASE_URL,
+    SUPABASE_KEY,
     {
       cookies: {
         get(name: string) {

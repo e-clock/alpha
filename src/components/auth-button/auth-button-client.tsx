@@ -3,7 +3,7 @@ import { useRouter } from 'next/navigation'
 import { type Session } from '@supabase/supabase-js'
 
 import { createBrowserClient } from '@/utils/supabase-client'
-import { BASEURL } from '@/settings'
+import { SITE_URL } from '@/settings'
 
 interface Props {
   session: Session | null
@@ -17,7 +17,7 @@ export function AuthButtonClient({ session }: Props) {
     await supabase.auth.signInWithOAuth({
       provider: 'google',
       options: {
-        redirectTo: `${BASEURL}/auth/callback`
+        redirectTo: `${SITE_URL}/auth/callback`
       }
     })
   }

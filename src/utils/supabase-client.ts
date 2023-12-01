@@ -1,7 +1,7 @@
 import { createBrowserClient as createBC } from '@supabase/ssr'
 
-import { SUPABASEKEY, SUPABASEURL } from '@/settings'
+import { SUPABASE_KEY, SUPABASE_URL } from '@/settings'
 
 export function createBrowserClient() {
-  return createBC(SUPABASEURL, SUPABASEKEY)
+  return createBC(SUPABASE_URL, SUPABASE_KEY)
 }
