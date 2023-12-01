@@ -1,4 +1,5 @@
 'use client'
+import { Button } from '@nextui-org/button'
 import { useRouter } from 'next/navigation'
 import { type Session } from '@supabase/supabase-js'
 
@@ -32,12 +33,12 @@ export function AuthButtonClient({ session }: Props) {
       {
         session
           ? (
-          <button onClick = { handleSingOut } className="flex items-center justify-center px-4 py-2 space-x-2 bg-white border border-gray-300 rounded shadow-sm text-sm font-medium text-gray-500 hover:bg-gray-50" > Sing Out</button>
+            <Button onClick={handleSingOut} >Sing Out</Button>
             )
           : (
-          <button onClick={handleSingIn} className="flex items-center justify-center px-4 py-2 space-x-2 bg-white border border-gray-300 rounded shadow-sm text-sm font-medium text-gray-500 hover:bg-gray-50">Sing In with Google</button>
+            <Button onClick={handleSingIn} >Sing In with Google</Button>
             )
-    }
+      }
     </>
   )
 }
