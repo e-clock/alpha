@@ -6,6 +6,8 @@ import { type Session } from '@supabase/supabase-js'
 import { createBrowserClient } from '@/utils/supabase-client'
 import { SITE_URL } from '@/settings'
 
+import { GIcon } from '../../icons/g-icon'
+
 interface Props {
   session: Session | null
 }
@@ -33,10 +35,12 @@ export function AuthButtonClient({ session }: Props) {
       {
         session
           ? (
-            <Button onClick={handleSingOut} >Sing Out</Button>
+            <Button onClick={handleSingOut} >Sign Out</Button>
             )
           : (
-            <Button onClick={handleSingIn} >Sing In with Google</Button>
+            <Button onClick={handleSingIn} radius='sm' fullWidth startContent={<GIcon />} className='bg-transparent border-0 shadow-sm ring-1 ring-inset ring-gray-300' >
+              Sing In with Google
+            </Button>
             )
       }
     </>

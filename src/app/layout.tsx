@@ -6,6 +6,8 @@ import { Providers } from '@/context/providers'
 
 import './globals.css'
 
+import { Notification } from '@/components/atoms'
+
 const ubuntu = Ubuntu({ weight: ['400', '700'], subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -19,10 +21,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="h-full">
+    <html suppressHydrationWarning lang="en" className="h-full">
       <body className={clsx(ubuntu.className, 'h-full text-foreground bg-background')}>
         <Providers>
           {children}
+          <Notification />
         </Providers>
       </body>
     </html>
