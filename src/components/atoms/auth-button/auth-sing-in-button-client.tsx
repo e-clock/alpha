@@ -1,7 +1,7 @@
 'use client'
 import { Button } from '@nextui-org/button'
 
-import { createBrowserClient } from '@/utils/supabase-client'
+import { createBrowserClient } from '@/lib/supabase'
 import { SITE_URL } from '@/settings'
 
 import { GIcon } from '../../icons/g-icon'

@@ -7,7 +7,7 @@ import { useForm, Controller, type SubmitHandler } from 'react-hook-form'
 
 import { InputEmail, InputPassword } from '../atoms'
 import { useNotificationStore } from '@/stores'
-import { createBrowserClient } from '@/utils/supabase-client'
+import { createBrowserClient } from '@/lib/supabase'
 
 export interface IFormLogin {
   email: string

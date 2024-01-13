@@ -3,7 +3,7 @@ import { Button } from '@nextui-org/button'
 import { useRouter } from 'next/navigation'
 import { type Session } from '@supabase/supabase-js'
 
-import { createBrowserClient } from '@/utils/supabase-client'
+import { createBrowserClient } from '@/lib/supabase'
 import { SITE_URL } from '@/settings'
 
 import { GIcon } from '../../icons/g-icon'

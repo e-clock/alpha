@@ -6,7 +6,7 @@ import { Button } from '@nextui-org/button'
 
 import { InputPassword } from '../../atoms'
 import { useNotificationStore } from '@/stores'
-import { createBrowserClient } from '@/utils/supabase-client'
+import { createBrowserClient } from '@/lib/supabase'
 
 export interface IFormUpdatePassword {
   password: string

@@ -1,5 +1,5 @@
 // import { AuthButton } from '@/components/atoms'
-// import { createServerClient } from '@/utils/supabase-server'
+// import { createServerClient } from '@/lib/supabase'
 
 export default async function Home() {
   // const supabase = await createServerClient()

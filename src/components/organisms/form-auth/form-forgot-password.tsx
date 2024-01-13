@@ -7,7 +7,7 @@ import { Button } from '@nextui-org/button'
 import { InputEmail } from '../../atoms'
 import { SITE_URL } from '@/settings'
 import { useNotificationStore } from '@/stores'
-import { createBrowserClient } from '@/utils/supabase-client'
+import { createBrowserClient } from '@/lib/supabase'
 
 export interface IFormForgotPassword {
   email: string
